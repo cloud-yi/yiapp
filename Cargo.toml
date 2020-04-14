@@ -1,0 +1,29 @@
+[package]
+name = "yiapp"
+version = "0.1.0"
+authors = ["鸿文 <li@cloud-yi.com>"]
+edition = "2018"
+
+[dependencies]
+log = "~0.4.8"
+rand = "~0.7.0"
+clap = "~2.33.0"
+config = "~0.9.3"
+failure = "~0.1.5"
+serde = "~1.0.99"
+# bytes = { version = "~0.4.12", features = ["serde"] }
+
+# rpc
+# bincode = "*"
+# futures-preview = { version = "0.3.0-alpha.10", features = ["compat", "tokio-compat"] }
+# tarpc = { path = "/Users/lixiaoning/Projects/rust-prj/tarpc/tarpc", features = ["serde"] }
+# bincode_transport = { package = "tarpc-bincode-transport", path = "/Users/lixiaoning/Projects/rust-prj/tarpc/bincode-transport" }
+
+# [target.'cfg(unix)'.dependencies]
+# daemonize = "*"
+
+# [target.'cfg(windows)'.dependencies]
+# fwdansi = "*"
+
+[dev-dependencies]
+env_logger = "~0.6.2"
