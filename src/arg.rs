@@ -15,10 +15,10 @@ const CLONE_SPAWN: &str = "__CLONE_SPAWN__";
 
 #[derive(Debug, Fail)]
 pub enum Error {
-    #[fail(display = "")]
+    #[fail(display = "loading from file")]
     File,
 
-    #[fail(display = "")]
+    #[fail(display = "loading from environment")]
     Env,
 
     #[fail(display = "failed to match command argument")]
