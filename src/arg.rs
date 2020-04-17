@@ -83,6 +83,10 @@ where T: Deref<Target=str> + AsRef<str> + Display + Hash + Eq + Clone,
         App { name, args, clap, config, cdir }
     }
 
+    pub fn args_into<'de, D: Deserialize<'de>>(&self) -> YiResult<D> {
+        self.args.clone().try_into().to_yierr(Error::CmdArg)
+    }
+
     pub fn config(mut self, opts: Opts<'a, T>, keys: &[&str]) -> YiResult<Self> {
         let matches = self.clap.clone().get_matches();
 
